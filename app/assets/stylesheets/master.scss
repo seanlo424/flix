@@ -1,1 +1,15 @@
 @import "bootstrap";
+
+.navbar {
+	font-family: 'chunkfiveregular', sans-serif;
+	font-weight: 200;
+	box-shadow: 0px 1px 3px #2a2a2a;
+	background: image_url('dark-grey-terrazzo.png');
+}
+
+.navbar-inverse a.navbar-brand {
+	color: #F1F80E;
+	font-family: 'chunkfiveregular', sans-serif;
+	font-weight: 100;
+	font-size: 26px;
+}
