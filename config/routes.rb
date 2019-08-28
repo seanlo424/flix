@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   #devise_for :models
 	root 'static_pages#index'
 	resources :courses, only: [:index, :show]
+	resources :lessons, only: [:show]
 	namespace :instructor do
 		resources :sections, only: [] do
 			resources :lessons, only: [:new, :create]
