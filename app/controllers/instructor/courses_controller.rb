@@ -4,6 +4,7 @@ class Instructor::CoursesController < ApplicationController
 
 	def new
 		@course = Course.new
+		@image = Image.new
 	end
 
 	def create
@@ -13,6 +14,11 @@ class Instructor::CoursesController < ApplicationController
 		else
 			render :new, status: :unprocessable_entity
 		end
+
+		@image = Image.find(params[:image_id])
+		@course.image.create(image_params.merge(user: current_user))
+		redirect_to image_path(@image)
+		
 	end
 
 	def show
