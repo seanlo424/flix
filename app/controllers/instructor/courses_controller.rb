@@ -4,7 +4,6 @@ class Instructor::CoursesController < ApplicationController
 
 	def new
 		@course = Course.new
-		@image = Image.new
 	end
 
 	def create
@@ -18,7 +17,7 @@ class Instructor::CoursesController < ApplicationController
 		@image = Image.find(params[:image_id])
 		@course.image.create(image_params.merge(user: current_user))
 		redirect_to image_path(@image)
-		
+
 	end
 
 	def show
@@ -38,6 +37,6 @@ class Instructor::CoursesController < ApplicationController
 	end
 
 	def course_params
-		params.require(:course).permit(:title, :description, :cost)
+		params.require(:course).permit(:title, :description, :cost, :image)
 	end
 end
