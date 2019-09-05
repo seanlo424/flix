@@ -14,7 +14,7 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo2" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <%= link_to 'FlixPix', root_url, class: 'navbar-brand' %>
+    <%= link_to 'FlixPix', root_path, class: 'navbar-brand' %>
 
       <div class="collapse navbar-collaspe" id="navbarTogglerDemo2">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
@@ -23,7 +23,7 @@
           </li>
        
         </ul>
-        <ul class="nav navbar-nav">
+        <ul class="navbar-nav">
           <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
