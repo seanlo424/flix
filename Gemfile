@@ -74,6 +74,7 @@ gem "fog-aws"
 gem "mini_magick"
 gem "stripe"
 gem 'ranked-model'
+gem 'jquery-ui-rails'
 
 
 source 'https://rails-assets.org' do
