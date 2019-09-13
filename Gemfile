@@ -75,6 +75,7 @@ gem "mini_magick"
 gem "stripe"
 gem 'ranked-model'
 gem 'jquery-ui-rails'
+gem 'ranked-model'
 
 
 source 'https://rails-assets.org' do
