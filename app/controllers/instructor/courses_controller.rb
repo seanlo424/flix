@@ -1,5 +1,5 @@
 class Instructor::CoursesController < ApplicationController
-	before_action :authenticate_user!
+	before_action :authenticate_user! # this ensures that the pages. are only accessible if a user is logged in
 	before_action :require_authorized_for_current_course, only: [:show]
 
 	def new
